@@ -67,7 +67,9 @@ def parse_log(log):
 
 def extract_yaku(event):
     """event yaku are tuples of ID, count. Return just IDs."""
-    return event.attrib['yaku'].split(',')[::2]
+    if ['yaku'] in event.attrib.keys():
+        return event.attrib['yaku'].split(',')[::2]
+    return ['nagashi?']
 
 
 def has_riichi(yaku):
