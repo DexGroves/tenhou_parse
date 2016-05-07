@@ -1,1 +1,4 @@
 *.pyc
+data/*.gz
+data/processed/*.csv
+data/2013
